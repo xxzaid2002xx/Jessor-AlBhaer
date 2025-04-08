@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التخليص الجمركي الاحترافي | جسور البحار</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #495057;
+            padding: 0.75rem 1rem;
+            margin-left: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: #e9ecef;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-top: 2rem;
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content-paragraph {
+            font-size: 1.1rem;
+            color: #495057;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .icon-feature {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-group-item i {
+            color: #28a745;
+            margin-left: 0.75rem;
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .contact-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card h6 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+        }
+        .feature-card i {
+        /* تكبير حجم الأيقونات */
+        font-size: 3rem !important;
+    }
+
+    .fs-sm {
+        font-size: 0.9rem !important; /* حجم خط أصغر قليلاً للنص */
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm" dir="ltr">
+    <div class="container">
+        <a class="navbar-brand" href="english.html">
+            <img src="img/logo2.jpg" alt="Sea Bridges Logo" height="35" class="d-inline-block align-middle ms-2">
+            <span class="align-middle">Sea Bridges</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto" style="display: flex; justify-content: center; text-align: center;">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" href="index.html#about">About Us</a>
+                <a class="nav-link" href="index.html#services">Services</a>
+                <a class="nav-link" href="index.html#why-choose-us">Why Choose Us</a>
+                <a class="nav-link" href="index.html#partners">Our Partners</a>
+                <a class="nav-link" href="index.html#contact-us-section">Contact Us</a>
+                <a class="nav-link" href="Internal transportationA.html">العربية</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-refined py-5 mb-5" style="background-image: linear-gradient(to right, #fff0f5, #ffe4e1); margin-top: 100px;">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+              <h1 class="hero-title display-3 fw-bold mb-4">Fast and Reliable Domestic Transport Solutions</h1>
+              <p class="hero-subtitle lead mb-4">Transport your goods within Iraq’s cities and governorates efficiently and at competitive prices.</p>
+              <a href="#contact-section" class="btn btn-danger btn-lg rounded-pill shadow" style="margin-bottom: 100px;">Inquire About Our Services</a>
+          </div>
+          <div class="col-md-6 text-center">
+              <img src="https://i.pinimg.com/474x/52/df/ba/52dfba0bc4342025a58b97d83d6320c6.jpg" alt="Image representing domestic transport" class="img-fluid rounded shadow-lg" style="max-height: 350px;">
+          </div>
+      </div>
+  </div>
+  <div class="hero-overlay" style="background: rgba(255, 240, 245, 0.7);"></div>
+</header>
+
+<section class="bg-white py-16 px-4 md:px-8 lg:px-32 text-gray-800" dir="ltr">
+  <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-blue-800">Domestic Goods Transport</h2>
+      <p class="mb-4 leading-loose">
+          Jassoor Al-Bahar is a leading company in the field of domestic goods transport in Iraq and the Gulf countries. The company provides highly efficient internal transportation services, with a diverse fleet of trucks offering flexible and safe solutions for transporting goods within Iraq and the region.
+      </p>
+      <p class="mb-4 leading-loose">
+          The domestic transport services provided by Jassoor Al-Bahar excel in delivering innovative logistical solutions that contribute to speeding up the movement of goods and reducing transportation costs. The company offers fast and safe transportation services through a diverse fleet of trucks suitable for all types of goods based on size and weight.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">Types of Trucks Used in Domestic Transport:</h3>
+      <ul class="list-disc list-inside space-y-2">
+          <li>Light and medium trucks for city transportation.</li>
+          <li>Heavy trucks for transporting large and bulky goods.</li>
+          <li>Refrigerated trucks for transporting food and products that require low temperatures.</li>
+          <li>Open and closed trucks to ensure goods are protected from external elements during transport.</li>
+          <li>Special trucks for transporting heavy equipment and industrial machinery.</li>
+      </ul>
+
+      <p class="mb-4 leading-loose">
+          Jassoor Al-Bahar provides ideal solutions for transporting goods internally across Iraq and the Gulf countries by offering a variety of trucks tailored to different shipping needs, including the transport of food, industrial, and commercial products. The company also provides temporary storage services before shipping and secure storage during transport.
+      </p>
+
+      <p class="mb-4 leading-loose">
+          Domestic transport services are an essential part of Jassoor Al-Bahar's strategy to offer comprehensive logistical solutions that meet the needs of both the local and international markets. These services cover all major cities in Iraq and the region, allowing customers to access fast and efficient transport services.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">Key Features and Services Offered by Jassoor Al-Bahar in Domestic Transport:</h3>
+      <ul class="list-disc list-inside space-y-2">
+          <li>A diverse fleet of trucks that meets all domestic transportation needs.</li>
+          <li>Refrigerated transport services for sensitive goods such as food and medical products.</li>
+          <li>Heavy equipment and industrial machinery transport through specialized trucks that ensure the safety of the goods.</li>
+          <li>Temporary storage services for goods before shipping, with necessary documentation preparation.</li>
+          <li>Transport services to and from construction sites and large projects within cities.</li>
+          <li>Continuous monitoring of shipments to ensure timely delivery.</li>
+          <li>Professional and efficient transport of commercial goods and products from various industries.</li>
+          <li>Transport of hazardous and perishable materials using specialized methods to ensure safety.</li>
+          <li>Partial transport services with the option to consolidate shipments from multiple locations to reduce costs.</li>
+          <li>Commitment to precise delivery times across Iraq and the Gulf countries.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Keywords:</h3>
+      <p class="text-gray-600">Domestic goods transport in Iraq, domestic transport companies, internal transport services, inland road transport in Iraq, transport of goods within cities.</p>
+  </div>
+</section>
+
+      
+
+<section class="py-5">
+  <div class="container">
+      <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+              <h2 class="section-title h3 fw-bold mb-3">Why Choose Jassoor Al-Bahar's Domestic Transport Services?</h2>
+              <p class="lead text-muted">We offer reliable and fast domestic transport solutions to meet your business needs across Iraq.</p>
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" style="text-align: center;">
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #dc3545;">
+                  <i class="bi bi-house-fill text-danger"></i>
+                  <h5 class="fw-bold">Comprehensive Coverage</h5>
+                  <p class="text-muted">We reach all cities and governorates within Iraq.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #00c853;">
+                  <i class="bi bi-stopwatch-fill text-success"></i>
+                  <h5 class="fw-bold">Fast Delivery</h5>
+                  <p class="text-muted">We ensure your shipments are delivered as quickly as possible.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #6c757d;">
+                  <i class="bi bi-box-fill text-secondary"></i>
+                  <h5 class="fw-bold">Safe Transport</h5>
+                  <p class="text-muted">We guarantee the safety of your goods during the domestic transport process.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #ff8a65;">
+                  <i class="bi bi-truck-front-fill text-warning"></i>
+                  <h5 class="fw-bold">Diverse Fleet</h5>
+                  <p class="text-muted">We have a fleet of vehicles suitable for all types of shipments.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="bg-light py-5" dir="ltr">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <h2 class="section-title h3 fw-bold mb-3">Comprehensive Domestic Transport Services to Meet Your Needs</h2>
+              <p class="lead text-muted mb-4">We offer flexible and reliable domestic transport solutions suitable for various types of goods and distances.</p>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Transport of goods between cities and governorates</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Distribution and internal logistics transport services</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Transport of sensitive and perishable goods</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Safe packaging and secure handling of domestic shipments</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> Effective tracking of internal shipments</li>
+              </ul>
+          </div>
+          <div class="col-md-6 text-center">
+              <img src="https://i.pinimg.com/736x/97/94/cd/9794cdc31da65974fb8bec33a6a63edb.jpg" alt="Illustration of domestic delivery" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+          </div>
+      </div>
+  </div>
+</section>
+
+  
+
+<section id="contact-section" class="py-5 bg-white border-top">
+  <div class="container">
+      <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+              <h2 class="section-title h3 fw-bold mb-3">Start Your Domestic Transport Process with Ease and Confidence</h2>
+              <p class="lead text-muted">Get in touch with our team for the best offers and domestic transport services in Iraq.</p>
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4" dir="ltr">
+                  <i class="bi bi-telephone-fill text-primary mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Call Us</h6>
+                  <p class="text-muted mb-0">+964771000260</p>
+                  <p class="text-muted mb-0">+9647744996698</p>
+                  <p class="text-muted mb-0">+9647768555766</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                  <i class="bi bi-envelope-at-fill text-success mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Email Us</h6>
+                  <p class="text-muted mb-0">haider.zayer@jessoralbehar.com</p>
+                  <p class="text-muted mb-0">ali.musawi@jessoralbehar.com</p>
+                  <p class="text-muted mb-0">sales@jessoralbehar.com</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                  <i class="bi bi-geo-alt-fill text-danger mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Our Location</h6>
+                  <p class="text-muted mb-0">Iraq - Baghdad - Karrada</p>
+                  <a href="https://maps.app.goo.gl/gRmC1QAiW8c1oumt8" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View on Map</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="container mt-5 text-center">
+  <a href="english.html#services" class="back-link" style="color: #007bff;">Back to Services Page</a>
+</div>
+
+<footer class="bg-light py-4 mt-5 text-center text-muted border-top">
+  All rights reserved to Jassoor Al-Bahar © 2025
+</footer>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>

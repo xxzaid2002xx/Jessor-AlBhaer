@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التخليص الجمركي الاحترافي | جسور البحار</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #495057;
+            padding: 0.75rem 1rem;
+            margin-left: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: #e9ecef;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-top: 2rem;
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content-paragraph {
+            font-size: 1.1rem;
+            color: #495057;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .icon-feature {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-group-item i {
+            color: #28a745;
+            margin-left: 0.75rem;
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .contact-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card h6 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+        }
+        .feature-card i {
+        /* تكبير حجم الأيقونات */
+        font-size: 3rem !important;
+    }
+
+    .fs-sm {
+        font-size: 0.9rem !important; /* حجم خط أصغر قليلاً للنص */
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm" dir="ltr">
+    <div class="container">
+        <a class="navbar-brand" href="english.html">
+            <img src="img/logo2.jpg" alt="Sea Bridges Logo" height="35" class="d-inline-block align-middle ms-2">
+            <span class="align-middle">Sea Bridges</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto" style="display: flex; justify-content: center; text-align: center;">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" href="index.html#about">About Us</a>
+                <a class="nav-link" href="index.html#services">Services</a>
+                <a class="nav-link" href="index.html#why-choose-us">Why Choose Us</a>
+                <a class="nav-link" href="index.html#partners">Our Partners</a>
+                <a class="nav-link" href="index.html#contact-us-section">Contact Us</a>
+                <a class="nav-link" href="Storage servicesA.html">العربية</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-refined py-5 mb-5" style="background-image: linear-gradient(to right, #f5f5f5, #e0e0e0); margin-top: 100px;">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start">
+              <h1 class="hero-title display-3 fw-bold mb-4">Secure and Flexible Storage Solutions to Fit Your Needs</h1>
+              <p class="hero-subtitle lead mb-4">Modern and well-equipped storage spaces to protect your goods efficiently.</p>
+              <a href="#contact-section" class="btn btn-secondary btn-lg rounded-pill shadow" style="margin-bottom: 100px;">Discover Storage Solutions</a>
+          </div>
+          <div class="col-md-6 text-center">
+              <img src="https://i.pinimg.com/474x/02/b5/21/02b52142ddf7e15362431fecea1eabd9.jpg" alt="Illustrative Image of Storage Services" class="img-fluid rounded shadow-lg" style="max-height: 350px;">
+          </div>
+      </div>
+  </div>
+  <div class="hero-overlay" style="background: rgba(245, 245, 245, 0.7);"></div>
+</header>
+
+
+<section class="bg-white py-16 px-4 md:px-8 lg:px-32 text-gray-800" dir="ltr">
+  <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-blue-800">Storage Services</h2>
+      <p class="mb-4 leading-loose">
+          Jassoor Al-Bahar provides integrated storage services that meet the needs of clients in Iraq and the GCC countries. Our services are distinguished by offering a secure and monitored environment for storing various goods, whether commercial, industrial, or sensitive materials requiring specific temperature conditions.
+      </p>
+      <p class="mb-4 leading-loose">
+          We offer flexible storage solutions tailored to meet the diverse needs of the market, including storing large or small goods, as well as perishable materials and sensitive products requiring special storage conditions. Our services rely on modern technologies to ensure the safety and protection of goods throughout the storage period.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">Types of Storage Services Offered by Jassoor Al-Bahar:</h3>
+      <ul class="list-disc list-inside space-y-2">
+          <li>Storage of perishable food products in refrigerated warehouses.</li>
+          <li>Storage of commercial goods and industrial products.</li>
+          <li>Safe storage of heavy equipment and industrial machinery.</li>
+          <li>Storage of hazardous materials in compliance with international standards.</li>
+          <li>Storage of household furniture and furnishings in a protected environment.</li>
+          <li>Storage of goods in secure, closed warehouses that protect them from external factors.</li>
+          <li>Short-term and long-term storage services according to customer needs.</li>
+      </ul>
+
+      <p class="mb-4 leading-loose">
+          Jassoor Al-Bahar aims to provide the highest levels of service by offering warehouses equipped with the latest technologies to ensure proper storage of goods. We place great emphasis on providing a safe storage environment, with the ability to monitor shipments closely to ensure they reach their final destination in the best condition.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">Features of Jassoor Al-Bahar's Storage Services:</h3>
+      <ul class="list-disc list-inside space-y-2">
+          <li>Warehouses equipped with modern facilities to ensure safe and flexible storage.</li>
+          <li>24/7 surveillance systems to ensure the safety of goods.</li>
+          <li>Temperature control for sensitive goods, such as food products.</li>
+          <li>Short-term and long-term storage services tailored to customer needs.</li>
+          <li>Storage of hazardous materials in compliance with environmental and health standards.</li>
+          <li>Tracking of stored shipments to ensure safe and timely delivery.</li>
+          <li>Flexible solutions for storing industrial and commercial products with easy access.</li>
+          <li>Packaging and wrapping services before shipping to increase protection during transit.</li>
+      </ul>
+
+      <p class="mb-4 leading-loose">
+          Jassoor Al-Bahar also offers storage and consolidation services that facilitate shipping and export operations. Our customers can store their goods in our warehouses, with the ability to prepare the necessary documents for the shipping process to the desired destinations quickly and accurately.
+      </p>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Keywords:</h3>
+      <p class="text-gray-600">Storage services in Iraq, goods storage, food storage, heavy equipment storage, hazardous materials storage, storage services in Iraq and the GCC, furniture and furnishings storage.</p>
+  </div>
+</section>
+
+      
+
+<section class="py-5">
+  <div class="container">
+      <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+              <h2 class="section-title h3 fw-bold mb-3">Why Choose Jassoor Al-Bahar's Storage Services?</h2>
+              <p class="lead text-muted">We provide secure and organized storage spaces that ensure the safety of your goods and easy access to them.</p>
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" style="text-align: center;">
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #6c757d;">
+                  <i class="bi bi-building text-secondary"></i>
+                  <h5 class="fw-bold">Modern Facilities</h5>
+                  <p class="text-muted">Storage warehouses equipped with the latest technologies and security systems.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #28a745;">
+                  <i class="bi bi-shield-lock-fill text-success"></i>
+                  <h5 class="fw-bold">Guaranteed Security</h5>
+                  <p class="text-muted">Advanced surveillance systems and 24/7 security to protect your goods.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #17a2b8;">
+                  <i class="bi bi-layout-split text-info"></i>
+                  <h5 class="fw-bold">Flexible Solutions</h5>
+                  <p class="text-muted">Various storage spaces to suit different sizes and types of goods.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100" style="border-left-color: #ffc107;">
+                  <i class="bi bi-thermometer-half text-warning"></i>
+                  <h5 class="fw-bold">Climate Control</h5>
+                  <p class="text-muted">Temperature and humidity-controlled storage options for certain goods.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="bg-light py-5" dir="ltr">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <h2 class="section-title h3 fw-bold mb-3">Integrated Storage Services to Meet Your Business Needs</h2>
+              <p class="lead text-muted mb-4">We offer more than just storage space; we provide you with integrated logistical solutions.</p>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i> Long-term and short-term storage</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i> Inventory management and goods tracking</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i> Packaging and repackaging services</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i> Order fulfillment and distribution</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-secondary me-2"></i> Easy access to your goods</li>
+              </ul>
+          </div>
+          <div class="col-md-6 text-center">
+              <img src="https://i.pinimg.com/474x/98/81/b2/9881b29e9071ba50d5176bff0d90cce6.jpg" alt="Illustration of a warehouse" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section id="contact-section" class="py-5 bg-white border-top">
+  <div class="container">
+      <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+              <h2 class="section-title h3 fw-bold mb-3">Get the Perfect Storage Solutions for Your Goods</h2>
+              <p class="lead text-muted">Contact our team to discuss your storage needs and receive a customized quote.</p>
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4" dir="ltr">
+                  <i class="bi bi-telephone-fill text-primary mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Call Us</h6>
+                  <p class="text-muted mb-0">+964771000260</p>
+                  <p class="text-muted mb-0">+9647744996698</p>
+                  <p class="text-muted mb-0">+9647768555766</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                  <i class="bi bi-envelope-at-fill text-success mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Email Us</h6>
+                  <p class="text-muted mb-0">haider.zayer@jessoralbehar.com</p>
+                  <p class="text-muted mb-0">ali.musawi@jessoralbehar.com</p>
+                  <p class="text-muted mb-0">sales@jessoralbehar.com</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                  <i class="bi bi-geo-alt-fill text-danger mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Our Location</h6>
+                  <p class="text-muted mb-0">Iraq - Baghdad - Karrada</p>
+                  <a href="https://maps.app.goo.gl/gRmC1QAiW8c1oumt8" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View on Map</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="container mt-5 text-center">
+  <a href="english.html#services" class="back-link" style="color: #007bff;">Back to Services Page</a>
+</div>
+
+<footer class="bg-light py-4 mt-5 text-center text-muted border-top">
+  All rights reserved to Jassoor Al-Bahar © 2025
+</footer>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>

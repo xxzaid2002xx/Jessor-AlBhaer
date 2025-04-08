@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التخليص الجمركي الاحترافي | جسور البحار</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+     
+    <style>
+      /* --- General Styles --- */
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 1.7;
+          color: #333;
+          background-color: #f8f9fa;
+      }
+
+      a {
+          text-decoration: none;
+          color: #007bff;
+          transition: color 0.3s ease;
+      }
+
+      a:hover {
+          color: #0056b3;
+      }
+
+      /* --- Navigation Bar --- */
+      .navbar {
+          background-color: #fff !important;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          padding: 1rem 0;
+      }
+
+      .navbar-brand {
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: #007bff;
+      }
+
+      .navbar-nav .nav-link {
+          color: #495057;
+          padding: 0.75rem 1rem;
+          margin-left: 0.5rem;
+          transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+          color: #007bff;
+          font-weight: 500;
+      }
+
+      /* --- Hero Section --- */
+      .hero-section {
+          background-color: #e9ecef;
+          padding: 5rem 0;
+          text-align: center;
+      }
+
+      .hero-title {
+          font-size: 3rem;
+          font-weight: 700;
+          color: #343a40;
+          margin-bottom: 1.5rem;
+      }
+
+      .hero-subtitle {
+          font-size: 1.25rem;
+          color: #6c757d;
+          margin-bottom: 2rem;
+      }
+
+      .btn-primary {
+          background-color: #007bff;
+          border-color: #007bff;
+          color: #fff;
+          padding: 0.75rem 1.5rem;
+          border-radius: 0.25rem;
+          font-weight: 500;
+          transition: background-color 0.3s ease, border-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+          background-color: #0056b3;
+          border-color: #0056b3;
+      }
+
+      .hero-image {
+          max-width: 100%;
+          height: auto;
+          border-radius: 0.25rem;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          margin-top: 2rem;
+      }
+
+      /* --- Content Sections --- */
+      .content-section {
+          padding: 4rem 0;
+          background-color: #fff;
+      }
+
+      .content-title {
+          font-size: 2rem;
+          font-weight: 600;
+          color: #343a40;
+          margin-bottom: 1.5rem;
+          text-align: center;
+      }
+
+      .content-paragraph {
+          font-size: 1.1rem;
+          color: #495057;
+          line-height: 1.8;
+          text-align: center;
+          margin-bottom: 2rem;
+      }
+
+      .card {
+          border: 1px solid rgba(0, 0, 0, 0.125);
+          border-radius: 0.25rem;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          margin-bottom: 1.5rem;
+      }
+
+      .card-body {
+          padding: 1.5rem;
+          text-align: center;
+      }
+
+      .card-title {
+          font-size: 1.25rem;
+          font-weight: 500;
+          color: #212529;
+          margin-bottom: 1rem;
+      }
+
+      .card-text {
+          color: #6c757d;
+      }
+
+      .icon-feature {
+          font-size: 2rem;
+          color: #007bff;
+          margin-bottom: 1rem;
+      }
+
+      .list-group-item {
+          border: none;
+          padding: 0.75rem 0;
+          display: flex;
+          align-items: center;
+      }
+
+      .list-group-item i {
+          color: #28a745;
+          margin-left: 0.75rem;
+      }
+
+      /* --- Contact Section --- */
+      .contact-section {
+          background-color: #f8f9fa;
+          padding: 4rem 0;
+          text-align: center;
+          border-top: 1px solid #dee2e6;
+      }
+
+      .contact-title {
+          font-size: 2.2rem;
+          font-weight: 600;
+          color: #343a40;
+          margin-bottom: 2rem;
+      }
+
+      .contact-info {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          margin-bottom: 2rem;
+      }
+
+      .contact-card {
+          background-color: #fff;
+          border: 1px solid #dee2e6;
+          border-radius: 0.25rem;
+          padding: 1.5rem;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+          text-align: center;
+      }
+
+      .contact-card i {
+          font-size: 1.5rem;
+          color: #007bff;
+          margin-bottom: 0.75rem;
+      }
+
+      .contact-card h6 {
+          font-size: 1rem;
+          font-weight: 500;
+          color: #212529;
+          margin-bottom: 0.5rem;
+      }
+
+      .contact-card p,
+      .contact-card a {
+          font-size: 0.9rem;
+          color: #6c757d;
+      }
+
+      /* --- Footer --- */
+      .footer {
+          background-color: #fff;
+          padding: 1.5rem 0;
+          text-align: center;
+          color: #6c757d;
+          border-top: 1px solid #dee2e6;
+          font-size: 0.9rem;
+      }
+  </style>
+</head>
+```html
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" dir="ltr">
+        <div class="container">
+            <a class="navbar-brand" href="english.html">
+                <img src="img/logo2.jpg" alt="Sea Bridges Logo" height="35" class="d-inline-block align-middle ms-2">
+                <span class="align-middle">Sea Bridges</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto" style="display: flex; justify-content: center; text-align: center;">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html#about">About Us</a>
+                    <a class="nav-link" href="index.html#services">Services</a>
+                    <a class="nav-link" href="index.html#why-choose-us">Why Choose Us</a>
+                    <a class="nav-link" href="index.html#partners">Our Partners</a>
+                    <a class="nav-link" href="#contact-us-section">Contact Us</a>
+                    <a class="nav-link" href="ClearanceA.html">العربية</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <header class="hero-section py-5 mb-4" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="hero-title display-4 fw-bold mb-3">Smart Customs Clearance Solutions for Your Business Success</h1>
+                    <p class="hero-subtitle lead mb-4">We empower you to move your goods across borders with ease and confidence, backed by our specialized experts.</p>
+                    <a href="#contact-us-section" class="btn btn-primary btn-lg rounded-pill">Get Started Now</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img/jessor container 3.png" alt="Illustrative image of the customs clearance process" class="img-fluid rounded shadow-lg hero-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5" style="direction: ltr;">
+        <div class="container">
+            <h2>Customs Clearance</h2>
+            <p>Jessoralbehar Shipping Services is one of the leading customs clearance companies in Iraq, providing customs clearance services for shipments arriving in Iraq via sea ports, land borders, or airports.</p>
+
+            <p>Jessoralbehar has a specialized team with in-depth knowledge of customs laws in Iraq, ensuring efficient and fast customs clearance for you.</p>
+
+            <p>We also ensure the delivery of shipments to your warehouses throughout Iraq, regardless of the type of shipment or the imported material. We guarantee that we have the necessary expertise to handle all types of imported materials, whether food, medical, electronic, electrical, or others...</p>
+
+            <p>Jessoralbehar Shipping Services also offers customs clearance services for cars and vehicles throughout Iraq.</p>
+
+            <p>Jessoralbehar strives to be the first choice for importers in Iraq by providing its services accurately and efficiently, and completing customs clearance transactions at competitive costs, which saves customers a lot of expenses, in addition to expertise in dealing with the competent authorities.</p>
+
+            <p>Jessoralbehar assists its clients in preparing all documents related to customs clearance worldwide, as we strive to achieve the highest levels of customer satisfaction.</p>
+
+            <h3>Advantages of Customs Clearance Services in Iraq</h3>
+            <ul>
+                <li>Monitoring the movement and arrival history of shipments and working to shorten the time required for customs clearance.</li>
+                <li>Extensive experience in completing all customs procedures in Iraqi ports and airports.</li>
+                <li>Saving time and effort for customers by working with the best innovative systems for customs clearance in Iraq, leading to the improvement of service levels.</li>
+                <li>Facilitating import and export operations by providing customs advice and the necessary documents.</li>
+                <li>Providing a team of specialists in customs clearance work 24 hours a day to ensure the completion of all customs procedures and ensure the readiness of the necessary shipping documents.</li>
+                <li>Providing the best shipment transportation services from ports and airports for various types of goods and materials after their clearance and delivery to your headquarters or warehouses in Iraq.</li>
+            </ul>
+
+            <h3>Required Documents for Import, Whether for Personal or Commercial Shipments</h3>
+            <ul>
+                <li>Invoice</li>
+                <li>Packing List</li>
+                <li>Certificate of Origin</li>
+                <li>Bill of Lading</li>
+                <li>Authorization for Customs Clearance</li>
+                <li>Health certificate specific to food products and others, depending on the types of imported shipments</li>
+                <li>Prior approvals and permits in the importing country for certain special materials.</li>
+                <li>For commercial shipments, the importing company must be registered with the tax authority and also with the customs authority.</li>
+            </ul>
+
+            <h3>Frequently Asked Questions About Customs Clearance in Iraq</h3>
+
+            <h4>Required Documents for Importing Cars to Iraq and Arab Countries:</h4>
+            <ul>
+                <li>Purchase Invoice</li>
+                <li>Export Certificate</li>
+                <li>Bills of Lading</li>
+                <li>Authorization for the Customs Broker (NOC)</li>
+            </ul>
+
+            <h4>What is the Harmonized System HSCOD?</h4>
+            <p>It is an international multipurpose nomenclature for goods, developed by the World Customs Organization. It is also called the Harmonized System and is used to determine the applicable customs duty rate for any commodity. It consists of a table including items, chapters, and their numerical codes and is used as a basis for tariffs in more than 176 countries or customs unions.</p>
+
+            <h4>Advantages of Applying the Harmonized System:</h4>
+            <ul>
+                <li>The Harmonized System has helped governments establish an accurate mechanism for determining duties and taxes on goods.</li>
+                <li>The Harmonized System has facilitated the process of providing and preparing accurate information for investors and researchers.</li>
+                <li>All goods in the Harmonized System fall under clear classifications, which facilitates the import and export process.</li>
+            </ul>
+
+            <h3>Keywords:</h3>
+            <ul>
+                <li>Customs Broker in Iraq</li>
+                <li>Customs Clearance in Iraq</li>
+                <li>Customs Clearance Companies in Iraq</li>
+                <li>Customs Clearance Company in Iraq</li>
+            </ul>
+        </div>
+    </section>
+    <section class="content-section container py-5">
+        <h2 class="content-title h3 mb-4 text-center">Customs Clearance Steps for Your Shipments with Jessoralbehar</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p class="content-paragraph lead mb-4 text-center">
+                    We offer you a simplified and efficient customs clearance process that ensures your goods pass through borders smoothly and easily.
+                </p>
+            </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-5">
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 rounded-3">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-file-earmark-text-fill text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="card-title fw-bold">Submitting Documents and Information</h5>
+                        <p class="card-text text-muted">Provide us with all the necessary documents and information for your shipment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 rounded-3">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-search-heart-fill text-success mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="card-title fw-bold">Customs Audit and Review</h5>
+                        <p class="card-text text-muted">Our specialized team reviews and audits the documents and customs requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 rounded-3">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-door-open-fill text-warning mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="card-title fw-bold">Completing Procedures and Clearance</h5>
+                        <p class="card-text text-muted">Completing all necessary customs procedures to clear your shipments successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact-us-section" class="contact-section py-5">
+        <div class="container">
+            <h2 class="contact-title h3 mb-4">Contact Us to Simplify Your Customs Clearance Process</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center mb-5 text-muted">
+                        Our specialized team is ready to answer your inquiries and provide the necessary support for your shipments.
+                    </p>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 text-center p-4" dir="ltr">
+                                <i class="bi bi-telephone-fill text-primary mb-3" style="font-size: 1.5rem;"></i>
+                                <h6 class="fw-bold mb-2">Call Us</h6>
+                                <p class="text-muted mb-0">+964771000260</p>
+                                <p class="text-muted mb-0">+9647744996698</p>
+                                <p class="text-muted mb-0">+9647768555766</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                                <i class="bi bi-envelope-at-fill text-success mb-3" style="font-size: 1.5rem;"></i>
+                                <h6 class="fw-bold mb-2">Email Us</h6>
+                                <p class="text-muted mb-0">haider.zayer@jessoralbehr.com</p>
+                                <p class="text-muted mb-0">ali.musawi@jessoralbehar.com</p>
+                                <p class="text-muted mb-0">sales@jessoralbehar.com</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                                <i class="bi bi-geo-alt-fill text-danger mb-3" style="font-size: 1.5rem;"></i>
+                                <h6 class="fw-bold mb-2">Our Location</h6>
+                                <p class="text-muted mb-0">Iraq-Baghdad-Karrada</p>
+                                <a href="https://maps.app.goo.gl/gRmC1QAiW8c1oumt8" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Map</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5 text-center">
+        <a href="index.html#services" class="back-link" style="color: #007bff;">Back to Services Page</a>
+    </div>
+
+    <footer class="bg-light py-4 mt-5 text-center text-muted border-top">
+        All rights reserved to Jessoralbehar © 2025
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+```
+</html>
+
+

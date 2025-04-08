@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التخليص الجمركي الاحترافي | جسور البحار</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #495057;
+            padding: 0.75rem 1rem;
+            margin-left: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: #e9ecef;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-top: 2rem;
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content-paragraph {
+            font-size: 1.1rem;
+            color: #495057;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .icon-feature {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-group-item i {
+            color: #28a745;
+            margin-left: 0.75rem;
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .contact-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card h6 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" dir="ltr">
+        <div class="container">
+            <a class="navbar-brand" href="arabic.html">
+                <img src="img/logo2.jpg" alt="شعار جسور البحار" height="35" class="d-inline-block align-middle ms-2">
+                <span class="align-middle">جسور البحار</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" dir="rtl">
+                <div class="navbar-nav ms-auto" style="display: flex; justify-content: center; text-align: center;">
+                    <a class="nav-link active" aria-current="page" href="arabic.html">الرئيسية</a>
+                    <a class="nav-link" href="arabic.html#about">من نحن</a>
+                    <a class="nav-link" href="arabic.html#services">الخدمات</a>
+                    <a class="nav-link" href="arabic.html#why-choose-us">لماذا تختارنا</a>
+                    <a class="nav-link" href="arabic.html#partners">شركاؤنا</a>
+                    <a class="nav-link" href="#contact-section">اتصل بنا</a>
+                    <a class="nav-link" href="SeaFreightE.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-refined py-5 mb-5" style="margin-top: 150PX;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="hero-title display-3 fw-bold mb-4">الشحن البحري الذكي لحلول لوجستية متكاملة</h1>
+                    <p class="hero-subtitle lead mb-4">انقل بضائعك عبر البحار بكفاءة، وأمان، وبتكلفة مثالية مع خبرائنا في جسور البحار.</p>
+                    <a href="#contact-section" class="btn btn-primary btn-lg rounded-pill shadow" style="margin-bottom: 100PX;">اطلب استشارة مجانية</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img/jessor container 2.png" alt="صورة معبرة عن الشحن البحري" class="img-fluid rounded shadow-lg" style="max-height: 350px;">
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+    <section class="bg-white py-16 px-4 md:px-8 lg:px-32 text-gray-800">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-6 text-blue-800">الشحن البحري</h2>
+          <p class="mb-4 leading-loose">
+            أحدث الشحن البحري أثراً كبيراً منذ القديم في عالم شحن البضائع، حيث تتم حالياً معظم المعاملات التجارية بين مختلف قارات العالم عن طريق الشحن البحري. وباعتبار العراق مركزاً تجارياً هاماً في منطقة الخليج العربي والشرق الأوسط، تقدم جسور البحار للشحن أفضل الحلول لشحن البضائع والمواد المختلفة عبر البحر من خلال موانئ العراق المختلفة، حيث توفر جسور البحار الحد الأقصى من مرونة النقل والشحن مع الاحتفاظ بنطاق تكاليف محدود يتناسب مع رغبات العملاء سواء كانت للحاويات الكاملة أو الشحنات المجزئة أو الشحن البحري السائب.
+          </p>
+          <p class="mb-4 leading-loose">
+            تعتبر جسور البحار لخدمات الشحن شركة متخصصة في حركة الشحن البحري من وإلى معظم الموانئ باستخدام سفن الخطوط الملاحية العالمية سواء كانت الحمولات كاملة FCL أو مجزئة LCL، حيث تتولى جسور البحار جميع الإجراءات الخاصة بالموانئ والجمارك لتسهيل الشحن على عملائها.
+          </p>
+      
+          <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">أنظمة الشحن البحري</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>
+              <strong>الشحن الكلي (حمولة حاوية كاملة):</strong> يناسب العملاء الذين يرغبون في شحن كميات كبيرة، ويتم شحن كافة بضائع العميل في حاوية كاملة مخصصة له فقط.
+            </li>
+            <li>
+              <strong>الشحن الجزئي (حمولات صغيرة مجمعة):</strong> يتم شحن البضائع ضمن جزء من الحاوية مع شحنات أخرى لتقليل التكاليف، إلا أن بعض النفقات قد تكون أعلى نسبياً.
+            </li>
+          </ul>
+      
+          <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">مميزات جسور البحار في الشحن البحري</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>توفير حاويات بمختلف الأحجام لضمان حماية الشحنات.</li>
+            <li>إمكانية استخدام مستودعات الشركة لتجميع الشحنات أو إعادة تغليفها.</li>
+            <li>خبرة طويلة في إدارة الترانزيت البحري من آسيا وأوروبا.</li>
+            <li>تسهيل إعادة التصدير عبر موانئ العراق.</li>
+            <li>شبكة وكلاء واسعة في الدول العربية والأفريقية والأوروبية.</li>
+            <li>فروع للشحن البحري من الصين، ألمانيا، إيطاليا، تركيا.</li>
+            <li>خدمات شحن السيارات من العراق إلى مختلف أنحاء العالم.</li>
+            <li>توفير أسطول شاحنات مجهز لنقل الحاويات من وإلى الموانئ.</li>
+            <li>خدمات التعبئة والتغليف باستخدام مواد عالية الجودة.</li>
+            <li>تخليص جمركي شامل لجميع أنواع البضائع.</li>
+            <li>خدمات تغطي السعودية، الخليج، العراق، آسيا، أوروبا، أمريكا، أستراليا، وغيرها.</li>
+          </ul>
+      
+          <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">أنواع الحاويات البحرية</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li><strong>حاويات 20 قدم:</strong> سعة 30 م³، وزن 18 طن.</li>
+            <li><strong>حاويات 40 قدم:</strong> سعة 60 م³، وزن 22 طن.</li>
+            <li><strong>حاويات HQ 40 قدم:</strong> سعة 68 م³، وزن 22 طن.</li>
+            <li><strong>حاويات OT:</strong> مفتوحة من الأعلى، للحمولات المرتفعة.</li>
+            <li><strong>حاويات مبردة 20 و40 قدم:</strong> لنقل البضائع القابلة للتلف بدرجات حرارة مضبوطة.</li>
+            <li><strong>حاويات خاصة:</strong> مثل الحاويات المسطحة أو المنصة، للمعدات والحمولات الشاذة.</li>
+          </ul>
+      
+          <h3 class="text-xl font-semibold mt-8 mb-2 text-blue-700">كلمات مفتاحية:</h3>
+          <p class="text-gray-600">شركات الشحن البحري في العراق، شركة شحن بحري في العراق، خدمات شحن عبر الموانئ العراقية.</p>
+        </div>
+      </section>
+      
+
+      <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title h3 fw-bold mb-3">لماذا يعتبر الشحن البحري خيارك الاستراتيجي؟</h2>
+                    <p class="lead text-muted">اكتشف المزايا العديدة التي يقدمها الشحن البحري لنمو أعمالك وتوسعها العالمي.</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="bi bi-currency-dollar text-success mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">فعالية التكلفة</h5>
+                        <p class="text-muted text-center">حل اقتصادي مثالي للشحنات ذات الحجم الكبير والوزن الثقيل.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="bi bi-globe-americas text-primary mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">تغطية عالمية واسعة</h5>
+                        <p class="text-muted text-center">وصول إلى شبكة واسعة من الموانئ في جميع أنحاء العالم.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="bi bi-box-seam text-info mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">قدرة استيعابية كبيرة</h5>
+                        <p class="text-muted text-center">إمكانية نقل كميات ضخمة من البضائع دفعة واحدة.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                        <i class="bi bi-clock-history text-warning mb-3" style="font-size: 3rem;"></i>
+                        <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">حلول مستدامة</h5>
+                        <p class="text-muted text-center">يعتبر الشحن البحري خيارًا صديقًا للبيئة مقارنة بوسائل النقل الأخرى.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title h3 fw-bold mb-3">خدمات شحن بحري مصممة خصيصًا لاحتياجاتك</h2>
+                    <p class="lead text-muted mb-4">نقدم مجموعة شاملة من حلول الشحن البحري لتلبية متطلبات عملك المتنوعة.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> شحن حاويات كاملة (FCL)</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> شحن جزئي للحاويات (LCL)</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> شحن البضائع السائبة والمشاريع الكبيرة</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> خدمات التعبئة والتغليف والتأمين</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> تخليص جمركي متكامل في الموانئ</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> حلول لوجستية متكاملة من الباب إلى الباب</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="https://i.pinimg.com/474x/3d/56/76/3d5676ea53c2900f5c0298d07f6d9260.jpg" alt="رسم توضيحي للشحن البحري" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="py-5 bg-white border-top">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title h3 fw-bold mb-3">ابدأ رحلة شحنك البحري بثقة</h2>
+                    <p class="lead text-muted">تواصل مع فريقنا الخبير للحصول على استشارة مجانية وعرض أسعار مخصص.</p>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card border-0 shadow-sm rounded-3 text-center p-4" dir="ltr">
+                        <i class="bi bi-telephone-fill text-primary mb-3" style="font-size: 1.5rem;"></i>
+                        <h6 class="fw-bold mb-2">اتصل بنا</h6>
+                        <p class="text-muted mb-0">+964771000260</p>
+                        <p class="text-muted mb-0">+9647744996698</p>
+                        <p class="text-muted mb-0">+9647768555766</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                        <i class="bi bi-envelope-at-fill text-success mb-3" style="font-size: 1.5rem;"></i>
+                        <h6 class="fw-bold mb-2">راسلنا عبر البريد الإلكتروني</h6>
+                        <p class="text-muted mb-0">haider.zayer@jessoralbehar.com</p>
+                        <p class="text-muted mb-0">ali.musawi@jessoralbehar.com</p>
+                        <p class="text-muted mb-0">sales@jessoralbehar.com</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                        <i class="bi bi-geo-alt-fill text-danger mb-3" style="font-size: 1.5rem;"></i>
+                        <h6 class="fw-bold mb-2">موقعنا</h6>
+                        <p class="text-muted mb-0">العراق-بغداد-الكرادة</p>
+                        <a href="https://maps.app.goo.gl/gRmC1QAiW8c1oumt8" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">عرض الخريطة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container mt-5 text-center">
+        <a href="arabic.html#services" class="back-link" style="color: #007bff;">العودة إلى صفحة الخدمات</a>
+    </div>
+
+    <footer class="bg-light py-4 mt-5 text-center text-muted border-top">
+        جميع الحقوق محفوظة لـ جسور البحار © 2025
+    </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>

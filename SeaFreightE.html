@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التخليص الجمركي الاحترافي | جسور البحار</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #495057;
+            padding: 0.75rem 1rem;
+            margin-left: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: #e9ecef;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-top: 2rem;
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content-paragraph {
+            font-size: 1.1rem;
+            color: #495057;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .icon-feature {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-group-item i {
+            color: #28a745;
+            margin-left: 0.75rem;
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .contact-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card h6 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm" dir="ltr">
+    <div class="container">
+        <a class="navbar-brand" href="english.html">
+            <img src="img/logo2.jpg" alt="Sea Bridges Logo" height="35" class="d-inline-block align-middle ms-2">
+            <span class="align-middle">Sea Bridges</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto" style="display: flex; justify-content: center; text-align: center;">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" href="index.html#about">About Us</a>
+                <a class="nav-link" href="index.html#services">Services</a>
+                <a class="nav-link" href="index.html#why-choose-us">Why Choose Us</a>
+                <a class="nav-link" href="index.html#partners">Our Partners</a>
+                <a class="nav-link" href="index.html#contact-us-section">Contact Us</a>
+                <a class="nav-link" href="SeaFreightA.html">العربية</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-refined py-5 mb-5" style="margin-top: 150PX;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <h1 class="hero-title display-3 fw-bold mb-4">Smart Marine Shipping for Comprehensive Logistics Solutions</h1>
+                <p class="hero-subtitle lead mb-4">Transport your goods across seas efficiently, safely, and at an ideal cost with the experts at Seas Bridges.</p>
+                <a href="#contact-section" class="btn btn-primary btn-lg rounded-pill shadow" style="margin-bottom: 100PX;">Request a Free Consultation</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="img/jessor container 2.png" alt="Image depicting marine shipping" class="img-fluid rounded shadow-lg" style="max-height: 350px;">
+            </div>
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+</header>
+
+<section class="bg-white py-16 px-4 md:px-8 lg:px-32 text-gray-800" dir="ltr">
+  <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-blue-800">Sea Shipping</h2>
+      <p class="mb-4 leading-loose">
+          Modern sea shipping has had a significant impact on the world of freight transport. Currently, most commercial transactions between various continents are carried out via sea shipping. As Iraq is a key commercial hub in the Arabian Gulf and the Middle East, Bridges of the Seas offers the best solutions for shipping goods and various materials by sea through Iraq’s different ports, providing maximum flexibility in transport and shipping while maintaining a limited cost range that suits customers' needs, whether for full containers, less-than-container-load (LCL), or bulk sea shipping.
+      </p>
+      <p class="mb-4 leading-loose">
+          Bridges of the Seas is a specialized company in sea shipping operations to and from most ports using global shipping line vessels, whether full container loads (FCL) or less-than-container-load (LCL). The company handles all port and customs procedures to facilitate shipping for its clients.
+      </p>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">Sea Shipping Systems</h3>
+      <ul class="list-disc list-inside space-y-2">
+          <li>
+              <strong>Full Container Shipping (FCL):</strong> Suitable for clients wishing to ship large quantities, with all of the client’s goods shipped in a dedicated full container.
+          </li>
+          <li>
+              <strong>Partial Shipping (LCL):</strong> Goods are shipped within part of a container along with other shipments to reduce costs, though some expenses may be higher.
+          </li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">Bridges of the Seas Advantages in Sea Shipping</h3>
+      <ul class="list-disc list-inside space-y-2">
+          <li>Providing containers of various sizes to ensure shipment protection.</li>
+          <li>Ability to use the company's warehouses to consolidate or repackage shipments.</li>
+          <li>Extensive experience in managing sea transit from Asia and Europe.</li>
+          <li>Facilitating re-exportation via Iraq's ports.</li>
+          <li>Wide network of agents in Arab, African, and European countries.</li>
+          <li>Sea shipping branches in China, Germany, Italy, and Turkey.</li>
+          <li>Car shipping services from Iraq to various parts of the world.</li>
+          <li>Equipped truck fleet for transporting containers to and from ports.</li>
+          <li>High-quality packing services using top materials.</li>
+          <li>Comprehensive customs clearance for all types of goods.</li>
+          <li>Services covering Saudi Arabia, the Gulf, Iraq, Asia, Europe, America, Australia, and more.</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold mt-8 mb-4 text-blue-700">Types of Sea Containers</h3>
+      <ul class="list-disc list-inside space-y-2">
+          <li><strong>20-Foot Container:</strong> Capacity 30 m³, weight 18 tons.</li>
+          <li><strong>40-Foot Container:</strong> Capacity 60 m³, weight 22 tons.</li>
+          <li><strong>40-Foot HQ Container:</strong> Capacity 68 m³, weight 22 tons.</li>
+          <li><strong>Open Top Container (OT):</strong> Open from the top, for high loads.</li>
+          <li><strong>Refrigerated Containers (20 & 40 Feet):</strong> For transporting perishable goods at controlled temperatures.</li>
+          <li><strong>Special Containers:</strong> Such as flat-rack or platform containers, for equipment and irregular loads.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-8 mb-2 text-blue-700">Keywords:</h3>
+      <p class="text-gray-600">Sea shipping companies in Iraq, shipping company in Iraq, shipping services through Iraqi ports.</p>
+  </div>
+</section>
+
+
+<section class="py-5" dir="ltr">
+  <div class="container">
+      <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+              <h2 class="section-title h3 fw-bold mb-3">Why is Sea Shipping Your Strategic Choice?</h2>
+              <p class="lead text-muted">Discover the many advantages that sea shipping offers for the growth and global expansion of your business.</p>
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                  <i class="bi bi-currency-dollar text-success mb-3" style="font-size: 3rem;"></i>
+                  <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">Cost-Effectiveness</h5>
+                  <p class="text-muted text-center">An ideal economic solution for large shipments and heavy goods.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                  <i class="bi bi-globe-americas text-primary mb-3" style="font-size: 3rem;"></i>
+                  <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">Wide Global Coverage</h5>
+                  <p class="text-muted text-center">Access to a vast network of ports worldwide.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                  <i class="bi bi-box-seam text-info mb-3" style="font-size: 3rem;"></i>
+                  <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">High Capacity</h5>
+                  <p class="text-muted text-center">The ability to transport large quantities of goods at once.</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="feature-card shadow-sm rounded-3 h-100 d-flex flex-column align-items-center justify-content-center p-4">
+                  <i class="bi bi-clock-history text-warning mb-3" style="font-size: 3rem;"></i>
+                  <h5 class="fw-bold mb-2" style="font-size: 1.5rem;">Sustainable Solutions</h5>
+                  <p class="text-muted text-center">Sea shipping is considered an environmentally friendly option compared to other transportation methods.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="bg-light py-5" dir="ltr">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <h2 class="section-title h3 fw-bold mb-3">Marine Shipping Services Tailored to Your Needs</h2>
+              <p class="lead text-muted mb-4">We offer a comprehensive range of marine shipping solutions to meet the diverse needs of your business.</p>
+              <ul class="list-unstyled">
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Full Container Load (FCL)</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Less than Container Load (LCL)</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Bulk Cargo and Large Projects Shipping</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Packing, Packaging, and Insurance Services</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Comprehensive Customs Clearance at Ports</li>
+                  <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Integrated Door-to-Door Logistics Solutions</li>
+              </ul>
+          </div>
+          <div class="col-md-6 text-center">
+              <img src="https://i.pinimg.com/474x/3d/56/76/3d5676ea53c2900f5c0298d07f6d9260.jpg" alt="Marine Shipping Illustration" class="img-fluid rounded shadow-lg" style="max-height: 300px;">
+          </div>
+      </div>
+  </div>
+</section>
+
+<section id="contact-section" class="py-5 bg-white border-top">
+  <div class="container">
+      <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+              <h2 class="section-title h3 fw-bold mb-3">Start Your Marine Shipping Journey with Confidence</h2>
+              <p class="lead text-muted">Get in touch with our expert team for a free consultation and a customized price quote.</p>
+          </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4" dir="ltr">
+                  <i class="bi bi-telephone-fill text-primary mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Call Us</h6>
+                  <p class="text-muted mb-0">+964771000260</p>
+                  <p class="text-muted mb-0">+9647744996698</p>
+                  <p class="text-muted mb-0">+9647768555766</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                  <i class="bi bi-envelope-at-fill text-success mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Email Us</h6>
+                  <p class="text-muted mb-0">haider.zayer@jessoralbehar.com</p>
+                  <p class="text-muted mb-0">ali.musawi@jessoralbehar.com</p>
+                  <p class="text-muted mb-0">sales@jessoralbehar.com</p>
+              </div>
+          </div>
+          <div class="col">
+              <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                  <i class="bi bi-geo-alt-fill text-danger mb-3" style="font-size: 1.5rem;"></i>
+                  <h6 class="fw-bold mb-2">Our Location</h6>
+                  <p class="text-muted mb-0">Iraq - Baghdad - Karrada</p>
+                  <a href="https://maps.app.goo.gl/gRmC1QAiW8c1oumt8" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Map</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="container mt-5 text-center">
+  <a href="english.html#services" class="back-link" style="color: #007bff;">Back to Services Page</a>
+</div>
+
+<footer class="bg-light py-4 mt-5 text-center text-muted border-top">
+  All Rights Reserved © Jessor Al Behar 2025
+</footer>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>

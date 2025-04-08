@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التخليص الجمركي الاحترافي | جسور البحار</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/custom.css"> 
+    
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        .navbar-nav .nav-link {
+            color: #495057;
+            padding: 0.75rem 1rem;
+            margin-left: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            background-color: #e9ecef;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            margin-top: 2rem;
+        }
+
+        /* --- Content Sections --- */
+        .content-section {
+            padding: 4rem 0;
+            background-color: #fff;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .content-paragraph {
+            font-size: 1.1rem;
+            color: #495057;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.25rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .icon-feature {
+            font-size: 2rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .list-group-item i {
+            color: #28a745;
+            margin-left: 0.75rem;
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .contact-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #343a40;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-card {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 1.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .contact-card i {
+            font-size: 1.5rem;
+            color: #007bff;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-card h6 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" dir="ltr">
+        <div class="container">
+            <a class="navbar-brand" href="arabic.html">
+                <img src="img/logo2.jpg" alt="شعار جسور البحار" height="35" class="d-inline-block align-middle ms-2">
+                <span class="align-middle">جسور البحار</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" dir="rtl">
+                <div class="navbar-nav ms-auto" style="display: flex; justify-content: center; text-align: center;">
+                    <a class="nav-link active" aria-current="page" href="arabic.html">الرئيسية</a>
+                    <a class="nav-link" href="arabic.html#about">من نحن</a>
+                    <a class="nav-link" href="arabic.html#services">الخدمات</a>
+                    <a class="nav-link" href="arabic.html#why-choose-us">لماذا تختارنا</a>
+                    <a class="nav-link" href="arabic.html#partners">شركاؤنا</a>
+                    <a class="nav-link" href="#contact-us-section">اتصل بنا</a>
+                    <a class="nav-link" href="ClearanceE.html">EN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section py-5 mb-4" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="hero-title display-4 fw-bold mb-3">حلول التخليص الجمركي الذكية لنجاح أعمالك</h1>
+                    <p class="hero-subtitle lead mb-4">نمكنك من نقل بضائعك عبر الحدود بكل سهولة وثقة، مدعومًا بخبرائنا المتخصصين.</p>
+                    <a href="#contact-us-section" class="btn btn-primary btn-lg rounded-pill">ابدأ الآن</a>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img/jessor container 3.png" alt="صورة توضيحية لعملية التخليص الجمركي" class="img-fluid rounded shadow-lg hero-image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <h2>التخليص الجمركي</h2>
+        <p>تعتبر جسور البحار لخدمات الشحن واحدة من شركات التخليص الجمركي في العراق الرائدة في هذا المجال، حيث توفر خدمات التخليص الجمركي للشحنات الواردة إلى دولة العراق سواء عن طريق الموانئ البحرية أو الحدود البرية أو في المطارات.</p>
+      
+        <p>تتمتع جسور البحار بفريق مختص ذو معرفة عميقة بالقوانين الجمركية في العراق، حيث نضمن لكم القيام بعملية التخليص الجمركي بكفاءة وسرعة.</p>
+      
+        <p>كما نؤمن توصيل الشحنات إلى مستودعاتكم في جميع أنحاء العراق، مهما كان نوع الشحنة أو المادة المستوردة، نحن نضمن لكم أن لدينا الخبرة اللازمة للتعامل مع جميع أنواع المواد المستوردة، سواء كانت غذائية، طبية، إلكترونية، كهربائية أو غيرها...</p>
+      
+        <p>تقدم جسور البحار لخدمات الشحن أيضاً خدمة التخليص الجمركي للسيارات والمركبات الآلية في جميع أنحاء العراق.</p>
+      
+        <p>تسعى جسور البحار لتكون الخيار الأول للمستوردين في العراق، وذلك عبر تقديم خدماتها بدقة وكفاءة، وإنجاز معاملات التخليص الجمركي بتكاليف منافسة، مما يوفر الكثير من النفقات على العملاء، بالإضافة إلى خبرة في التعامل مع الجهات المختصة.</p>
+      
+        <p>تقوم جسور البحار بمساعدة عملائها في إعداد جميع الوثائق المتعلقة بالتخليص الجمركي وذلك في مختلف أنحاء العالم حيث نسعى بذلك إلى تحقيق أعلى مستويات رضا العملاء.</p>
+      
+        <h3>مميزات خدمات التخليص الجمركي في العراق</h3>
+        <ul>
+          <li>متابعة حركة وتاريخ وصول الشحنات والعمل على اختصار الزمن اللازم لتخليص الشحنات.</li>
+          <li>خبرة طويلة في إنهاء كافة الإجراءات الجمركية في الموانئ والمطارات العراقية.</li>
+          <li>توفير الوقت والجهد على العملاء وذلك بالعمل على أفضل النظم المبتكرة للتخليص الجمركي في العراق، مما يؤدي إلى الارتقاء بمستوى الخدمات.</li>
+          <li>تسهيل عمليات الاستيراد والتصدير من خلال تقديم المشورة الجمركية والوثائق اللازمة لذلك.</li>
+          <li>توفير فريق عمل من المتخصصين في أعمال التخليص الجمركي على مدار 24 ساعة يومياً لضمان إنهاء كافة الإجراءات الجمركية وضمان جاهزية مستندات الشحن اللازمة.</li>
+          <li>تقديم أفضل خدمات نقل الشحنات من الموانئ والمطارات لمختلف أنواع البضائع والمواد بعد تخليصها وتوصيلها إلى مقركم أو مستودعاتكم في العراق.</li>
+        </ul>
+      
+        <h3>الأوراق المطلوبة للاستيراد سواء للشحنات الشخصية أو التجارية</h3>
+        <ul>
+          <li>الفاتورة</li>
+          <li>بيان التعبئة</li>
+          <li>شهادة المنشأ</li>
+          <li>بوليصة الشحن</li>
+          <li>تفويض بتخليص الشحنات</li>
+          <li>شهادة صحية خاصة بالمواد الغذائية وغيرها حسب أنواع الشحنات المستوردة</li>
+          <li>الموافقات والتصاريح المسبقة في بلد الاستيراد وذلك لبعض المواد الخاصة.</li>
+          <li>بالنسبة للشحنات التجارية يجب على الشركة المستوردة أن تكون مسجلة بمصلحة الضرائب وأيضاً بمصلحة الجمارك.</li>
+        </ul>
+      
+        <h3>أسئلة شائعة حول التخليص الجمركي في العراق</h3>
+      
+        <h4>الأوراق المطلوبة لاستيراد السيارات إلى العراق والدول العربية:</h4>
+        <ul>
+          <li>فاتورة الشراء</li>
+          <li>شهادة تصدير</li>
+          <li>بوالص الشحن</li>
+          <li>تفويض للمخلص الجمركي (NOC)</li>
+        </ul>
+      
+        <h4>ما هو النظام المنسق HSCOD؟</h4>
+        <p>هو أسلوب دولي متعدد الأغراض لتسمية البضائع ومطور من قبل منظمة الجمارك العالمية. ويطلق عليه النظام الموحد، ويستخدم لمعرفة نسبة الرسم الجمركي المطبق على أي سلعة. يتكون من جدول متضمن لبنود وفصول ورموزها الرقمية ويستخدم كأساس لتعريفات في أكثر من 176 دولة أو اتحاد جمركي.</p>
+      
+        <h4>مزايا تطبيق النظام المنسق:</h4>
+        <ul>
+          <li>ساعد النظام الموحد الحكومات على وضع آلية دقيقة لتحديد الرسوم والضرائب على السلع.</li>
+          <li>سهل النظام الموحد عملية توفير وتجهيز معلومات دقيقة للمستثمرين والباحثين.</li>
+          <li>يقع كافة السلع في النظام المنسق تحت تصنيفات واضحة مما يسهل عملية الاستيراد والتصدير.</li>
+        </ul>
+      
+        <h3>كلمات مفتاحية:</h3>
+        <ul>
+          <li>مخلص جمركي في العراق</li>
+          <li>مخلص جمركي في العراق</li>
+          <li>شركات التخليص الجمركي في العراق</li>
+          <li>شركة تخليص جمركي في العراق</li>
+        </ul>
+      </section>
+      <section class="content-section container py-5">
+        <h2 class="content-title h3 mb-4 text-center">خطوات التخليص الجمركي لشحناتكم مع جسور البحار</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <p class="content-paragraph lead mb-4 text-center">
+                    نقدم لكم عملية تخليص جمركي مبسطة وفعالة تضمن مرور بضائعكم عبر الحدود بسلاسة ويسر.
+                </p>
+            </div>
+        </div>
+    
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-5">
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 rounded-3">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-file-earmark-text-fill text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="card-title fw-bold">تقديم المستندات والمعلومات</h5>
+                        <p class="card-text text-muted">تزويدنا بكافة المستندات والمعلومات اللازمة لشحنتكم.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 rounded-3">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-search-heart-fill text-success mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="card-title fw-bold">التدقيق والمراجعة الجمركية</h5>
+                        <p class="card-text text-muted">يقوم فريقنا المتخصص بمراجعة وتدقيق المستندات والمتطلبات الجمركية.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm h-100 border-0 rounded-3">
+                    <div class="card-body text-center p-4">
+                        <i class="bi bi-door-open-fill text-warning mb-3" style="font-size: 2rem;"></i>
+                        <h5 class="card-title fw-bold">إنهاء الإجراءات والتخليص</h5>
+                        <p class="card-text text-muted">إتمام كافة الإجراءات الجمركية اللازمة لتخليص شحناتكم بنجاح.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <section id="contact-us-section" class="contact-section py-5">
+        <div class="container">
+            <h2 class="contact-title h3 mb-4">تواصل معنا لتبسيط عملية التخليص الجمركي</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="lead text-center mb-5 text-muted">
+                        فريقنا المتخصص مستعد للإجابة على استفساراتكم وتقديم الدعم اللازم لشحناتكم.
+                    </p>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 text-center p-4" dir="ltr">
+                                <i class="bi bi-telephone-fill text-primary mb-3" style="font-size: 1.5rem;"></i>
+                                <h6 class="fw-bold mb-2">اتصل بنا</h6>
+                                <p class="text-muted mb-0">+964771000260</p>
+                                <p class="text-muted mb-0">+9647744996698</p>
+                                <p class="text-muted mb-0">+9647768555766</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                                <i class="bi bi-envelope-at-fill text-success mb-3" style="font-size: 1.5rem;"></i>
+                                <h6 class="fw-bold mb-2">راسلنا عبر البريد الإلكتروني</h6>
+                                <p class="text-muted mb-0">haider.zayer@jessoralbehr.com</p>
+                                <p class="text-muted mb-0">ali.musawi@jessoralbehar.com</p>
+                                <p class="text-muted mb-0">sales@jessoralbehar.com</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0 shadow-sm rounded-3 text-center p-4">
+                                <i class="bi bi-geo-alt-fill text-danger mb-3" style="font-size: 1.5rem;"></i>
+                                <h6 class="fw-bold mb-2">موقعنا</h6>
+                                <p class="text-muted mb-0">العراق-بغداد-الكرادة</p>
+                                <a href="https://maps.app.goo.gl/gRmC1QAiW8c1oumt8" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">عرض الخريطة</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container mt-5 text-center">
+        <a href="arabic.html#services" class="back-link" style="color: #007bff;">العودة إلى صفحة الخدمات</a>
+    </div>
+
+    <footer class="bg-light py-4 mt-5 text-center text-muted border-top">
+        جميع الحقوق محفوظة لـ جسور البحار © 2025
+    </footer>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
